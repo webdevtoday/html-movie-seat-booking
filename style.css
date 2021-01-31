@@ -43,7 +43,7 @@ html, body {
 }
 
 .Main {
-    min-width: 480px;
+    min-width: 400px;
     min-height: 100vh;
     background-color: var(--Main-bg-color);
 }
@@ -159,9 +159,9 @@ html, body {
     margin-bottom: calc(var(--Seat-height) + var(--Seats-gap) * 2);
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 0;
     gap: var(--Seats-gap);
     width: var(--Seats-col-width);
-    /* border: 1px solid #fff; */
 }
 .Seats_col--leftSide {
     padding: 0 var(--Seat-width);
@@ -169,4 +169,13 @@ html, body {
 .Seats_col--rightSide {
     padding-left: calc(var(--Seat-width) + var(--Seats-gap) * 2);
     padding-right: var(--Seat-width);
+}
+
+@media (max-width: 500px) {
+    :root {
+        --Seat-width: 25px;
+        --Seat-height: 20px;
+
+        --Seats-gap: 5px;
+    }
 }
