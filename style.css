@@ -47,6 +47,10 @@ html, body {
     min-height: 100vh;
     background-color: var(--Main-bg-color);
 }
+.Main_container {
+    display: flex;
+    flex-direction: column;
+}
 
 .Top {
     text-align: center;
@@ -177,5 +181,13 @@ html, body {
         --Seat-height: 20px;
 
         --Seats-gap: 5px;
+    }
+    .CinemaScreen {
+        height: 125px;
+    }
+    .CinemaScreen_mainLayer {
+        background:
+            linear-gradient(130deg, transparent 0%, transparent 40%, var(--CinemaScreen-bg-color) 40%, var(--CinemaScreen-bg-color) 73%, var(--Main-bg-color) 73%),
+            linear-gradient(55deg, var(--Main-bg-color) 0%, var(--Main-bg-color) 27%, var(--CinemaScreen-bg-color) 27%, var(--CinemaScreen-bg-color) 40%)
     }
 }
