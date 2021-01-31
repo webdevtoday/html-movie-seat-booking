@@ -43,7 +43,7 @@ html, body {
 }
 
 .Main {
-    min-width: 500px;
+    min-width: 480px;
     min-height: 100vh;
     background-color: var(--Main-bg-color);
 }
