@@ -10,6 +10,8 @@ img {
 }
 
 :root {
+    --max-width-content: 500px;
+
     --Main-bg-color: #252432;
 
     --Top-text-color: #c6c6cd;
@@ -31,6 +33,8 @@ img {
 
     --Seats-gap: 10px;
     --Seats-col-width: calc(var(--Seat-width) * 4 + var(--Seats-gap) * 4);
+
+    --Button-bg-color: #44b755;
 }
 
 html {
@@ -75,13 +79,18 @@ html, body {
 .Middle {
     flex-grow: 1;
 }
+.Middle_shoppingBasket {
+    margin: 0 auto;
+    position: relative;
+    max-width: var(--max-width-content);
+}
 
 .Hints_container {
     margin: 0 auto;
     padding: 30px 0 0;
     display: flex;
     justify-content: space-evenly;
-    max-width: 500px;
+    max-width: var(--max-width-content);
 }
 
 .Hint {
@@ -110,7 +119,7 @@ html, body {
 .CinemaScreen {
     position: relative;
     margin: 30px auto;
-    max-width: 500px;
+    max-width: var(--max-width-content);
     height: 150px;
     overflow: hidden;
     background-color: var(--Main-bg-color);
@@ -148,7 +157,9 @@ html, body {
     clip: rect(0 0 0 0);
 }
 .Seat_view {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--Seat-width);
     height: var(--Seat-height);
     border-radius: 12px 12px 0 0;
@@ -171,6 +182,7 @@ html, body {
 }
 .Seat_checkbox:disabled + .Seat_view {
     background-color: var(--Seat-notAvailable-bg-color);
+    color: #fff;
 }
 
 .Seats {
@@ -194,6 +206,69 @@ html, body {
 .Seats_col--rightSide {
     padding-left: calc(var(--Seat-width) + var(--Seats-gap) * 2);
     padding-right: var(--Seat-width);
+}
+
+.Button {
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    max-width: var(--max-width-content);
+    border: none;
+    color: #fff;
+    background-color: var(--Button-bg-color);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.Button:hover {
+    opacity: .7;
+}
+
+.ShoppingBasket {
+    color: #fff;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.ShoppingBasket--active {
+    opacity: 1;
+}
+.ShoppingBasket_container {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: calc(50% + var(--max-width-content) / 2);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ShoppingBasket_title {
+    padding: 0 0 5px 0;
+}
+.ShoppingBasket_list {
+    padding: 5px 0 5px 10px;
+    max-height: 78vh;
+    overflow-y: auto;
+    list-style-position: inside;
+    scrollbar-width: thin;
+}
+.ShoppingBasket_list::-webkit-scrollbar {
+    width: 7px;
+    background-color: #fff;
+}
+.ShoppingBasket_list::-webkit-scrollbar-button {
+    background-color: var(--Main-bg-color);
+    height: 10px;
+}
+.ShoppingBasket_list::-webkit-scrollbar-thumb {
+    background-color: var(--Main-bg-color);
+    border: 1px solid #fff;
+}
+.ShoppingBasket_total {
+    padding: 5px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 @media (max-width: 500px) {
