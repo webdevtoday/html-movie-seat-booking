@@ -26,7 +26,7 @@ img, svg {
 
     --Seat-notAvailable-bg-color: #444451;
     --Seat-selected-bg-color: #37e7f7;
-    --Seat-focused-bg-color: rgb(55, 192, 55);
+    --Seat-focused-bg-color: rgb(255, 238, 0);
     --Seat-available-bg-color: #ffffff;
     --Seat-width: 30px;
     --Seat-height: 25px;
@@ -320,8 +320,8 @@ html, body {
 
 @media (max-width: 649px) {
     :root {
-        --Seat-width: 25px;
-        --Seat-height: 20px;
+        --Seat-width: 30px;
+        --Seat-height: 25px;
         --Seats-gap: 5px;
     }
     .Top_button {
@@ -334,6 +334,15 @@ html, body {
         background:
             linear-gradient(130deg, transparent 0%, transparent 40%, var(--CinemaScreen-bg-color) 40%, var(--CinemaScreen-bg-color) 73%, var(--Main-bg-color) 73%),
             linear-gradient(55deg, var(--Main-bg-color) 0%, var(--Main-bg-color) 27%, var(--CinemaScreen-bg-color) 27%, var(--CinemaScreen-bg-color) 40%)
+    }
+
+    .Seats_col--leftSide {
+        padding: 0 var(--Seat-width) 0 0;
+        width: calc(var(--Seats-col-width) - var(--Seat-width));
+    }
+    .Seats_col--rightSide {
+        padding-right: 0;
+        width: calc(var(--Seats-col-width) - var(--Seat-width));
     }
 
     .ShoppingBasket_container {
