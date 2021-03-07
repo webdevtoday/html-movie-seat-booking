@@ -115,7 +115,6 @@ html, body {
     display: block;
     width: 30px;
     height: 25px;
-    border-radius: 12px 12px 0 0;
 }
 .Hint--notAvailable::before {
     background-color: var(--Hint-notAvailable-bg-color);
