@@ -169,7 +169,6 @@ html, body {
     align-items: center;
     width: var(--Seat-width);
     height: var(--Seat-height);
-    border-radius: 12px 12px 0 0;
     background-color: var(--Seat-available-bg-color);
 }
 .Seat_checkbox + .Seat_view:hover {
