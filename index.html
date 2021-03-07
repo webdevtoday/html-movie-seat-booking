@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Task</title>
+    <title>HTML Movie Seat Booking</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="Main">
         <div class="Main_container">
-
             <section class="Top">
                 <div class="Top_container">
                     <h3 class="Top_title">Choose your seats</h3>
@@ -27,10 +26,8 @@
                     </button>
                 </div>
             </section>
-
             <section class="Middle">
                 <div class="Middle_container">
-
                     <div class="Hints">
                         <div class="Hints_container">
                             <div class="Hint Hint--notAvailable">N/A</div>
@@ -38,12 +35,10 @@
                             <div class="Hint Hint--available">A</div>
                         </div>
                     </div>
-
                     <div class="CinemaScreen">
                         <div class="CinemaScreen_layer CinemaScreen_mainLayer"></div>
                         <div class="CinemaScreen_layer CinemaScreen_bottomLayer"></div>
                     </div>
-
                     <form class="Form" id="CinemaSeats">
                         <fieldset class="Form_container Seats">
                             <legend class="sr-only">A seat in cinema number</legend>
@@ -211,9 +206,7 @@
                                 </div>
 
                             </div>
-
                             <div class="Seats_row">
-
                                 <div class="Seats_col Seats_col--leftSide">
                                     <label class="Form_label Seat">
                                         <input type="checkbox" name="rows[6][]" value="1" class="Seat_checkbox" disabled>
@@ -240,7 +233,6 @@
                                         <span class="Seat_view">2</span>
                                     </label>
                                 </div>
-
                                 <div class="Seats_col">
                                     <label class="Form_label Seat">
                                         <input type="checkbox" name="rows[6][]" value="3" class="Seat_checkbox" disabled>
@@ -291,7 +283,6 @@
                                         <span class="Seat_view">6</span>
                                     </label>
                                 </div>
-
                                 <div class="Seats_col Seats_col--rightSide">
                                     <label class="Form_label Seat">
                                         <input type="checkbox" name="rows[6][]" value="7" class="Seat_checkbox" disabled>
@@ -318,12 +309,9 @@
                                         <span class="Seat_view">8</span>
                                     </label>
                                 </div>
-
                             </div>
-
                         </fieldset>
                     </form>
-
                     <div class="Middle_shoppingBasket ShoppingBasket">
                         <div class="ShoppingBasket_container">
                             <h3 class="ShoppingBasket_title">You are buying:</h3>
@@ -337,15 +325,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
-
-
-
         </div>
     </main>
-
     <script type="module" src="app.js"></script>
 </body>
 </html>
