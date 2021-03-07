@@ -22,11 +22,12 @@ class ShoppingBasket {
     }
 
     buttonClickHandler() {
-        console.log('click');
         this.buttonElementToggleActiveClass();
     }
 
     buttonElementToggleActiveClass() {
+        document.body.classList.toggle('lock-body');
+        this.buttonElement.classList.toggle('ShoppingBasketButton--active');
         this.containerElement.classList.toggle('ShoppingBasket_container--active');
     }
 
